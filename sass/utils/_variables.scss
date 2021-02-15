@@ -1,0 +1,48 @@
+@mixin titre {
+    font-family: 'Shrikhand', sans-serif;
+}
+
+@mixin texte {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+@mixin menu {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 1em;
+    padding-left: 5px;
+    margin-bottom: 20px;
+}
+
+@mixin button
+{
+    width: 60%;
+    padding-left: 1px;
+    padding-right: 1px;
+    font-size: 0.9em;
+    padding-top: 13.3px;
+    padding-bottom: 13.3px;
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient($secondary, $primary);
+    border-radius: 60px;
+    box-shadow: 2px 2px 15px $grey;
+    border: none;
+    outline: none;
+}
+
+@mixin fonctionnement 
+{
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 2px 2px 10px $grey;
+    margin-bottom: 20px;
+    margin-left: 18px;
+    background-color: $greyclair;
+    width: 92%;    
+}
+
+$greyclair: #F7F7F7;
+$grey: #EDEDED;
+$primary: #9356DC;
+$secondary: #FF79DA;
+$green: #99E2D0;

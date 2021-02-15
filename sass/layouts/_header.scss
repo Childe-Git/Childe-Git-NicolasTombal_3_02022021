@@ -1,0 +1,164 @@
+/*H E A D E R   D E   L' A C C E U I L */
+
+header a 
+{
+    text-decoration: none;
+    color: black;
+}
+
+.acceuil 
+{
+    background-color: $greyclair;
+    margin-top: -20px;
+    padding-bottom: 30px;
+    margin-bottom: 35px;
+
+    &__title
+    {
+        @include titre;
+        text-align: center;
+        font-size: 1.9em;
+        padding-top: 8px;
+        background-color: white;
+    }
+
+    &__loca
+    {
+        @include texte;
+        font-weight: bold;
+        margin-top: -21px;
+        background-color: $grey;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 0.9em;
+        width: 98%;
+        margin-left: 4px;
+        border-top: 2px solid #E1E1E1;
+    }
+
+    &__titlend
+    {
+        @include texte;
+        text-align: center;
+        font-size: 1.3em;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 10px;
+    }
+
+    &__para
+    {
+        @include texte;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-bottom: 10px;
+        margin-top: -5px;
+    }
+}
+
+    .btn
+    {
+       @include button;
+       position: relative;
+       z-index: 1;
+       &:hover
+        {   
+            &::after
+            {
+                opacity: 0.2;
+            }
+        }
+
+       &::after
+       {
+        content: "";
+        position: absolute;
+        border-radius: 60px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: lighten($color: $secondary, $amount: 2);
+        box-shadow: 2px 2px 20px black;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+       }
+    }
+
+    .btn a
+    {
+        text-decoration: none;
+        color: white;
+        border: none;
+    }
+
+    #container
+    {
+    text-align: center;
+    }
+
+#maps
+{
+    padding-right: 10px;
+}
+
+@media all and (min-width: 480px)
+{
+    .acceuil
+    {
+        &__btn
+        {
+            max-width: 10%;
+            min-width: 200px;
+        }
+
+        &__loca
+        {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}
+
+@media all and (max-width: 259px)
+{
+    .acceuil
+    {
+        &__btn
+        {
+            border-radius: 60px 60px 60px 60px;
+        }
+    }
+}
+
+/*H E A D E R   D E S   M E N U S*/
+
+.acceuilmenu
+{
+    width: 100%;
+    position: relative;
+    left: 0;
+    top: -19px;
+
+    &__title
+    {
+        @include titre;
+        font-size: 1.6em;
+        padding-top: 8px;
+        background-color: white;
+        margin-top: 0px;
+        text-align: center;
+        padding-bottom: 4px;
+    }
+    
+    #retour
+    {
+        position: absolute;
+        top: 19px;
+        left: 20px;
+        font-size: 1.1em;
+        color: rgb(51, 51, 51);
+    }
+}
+
