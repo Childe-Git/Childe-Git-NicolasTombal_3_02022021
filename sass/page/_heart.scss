@@ -1,0 +1,83 @@
+.like
+{
+    position: relative;
+    left: 26.4px;
+    top: 1px;
+    color: black;
+}
+
+.heart
+{
+    position: absolute;    
+    text-align: right;    
+    width: 80%;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+.color
+{
+    color: $greyclair;
+    position: relative;
+    font-size: 12.3px;
+    padding-top: 20px;
+
+    &:hover
+    {
+        animation: fillheart 750ms linear forwards;
+        left: -2.5px;
+        top: 1.7px;
+        font-size: 15px;
+
+    }
+}
+
+@keyframes fillheart
+{
+    0%{
+        opacity: 0.1;  
+        background-image: linear-gradient($secondary, $primary);
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;  
+    }
+
+    20%{
+        opacity: 0.2;
+    }
+
+    40%{
+        opacity: 0.4;
+    }
+
+    60%{
+        opacity: 0.6;
+    }
+
+    80%{
+        opacity: 0.8;
+    }
+
+    100%{
+        opacity: 1;
+        background-image: linear-gradient($secondary, $primary);
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@media all and (max-width: 260px)
+{ 
+    .color
+    {
+
+        &:hover
+        {
+            left: -1.4px;
+            top: 1px;
+        }
+    }
+}

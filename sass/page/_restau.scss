@@ -30,7 +30,7 @@
         box-shadow: 0px 0px 25px gray;
         border-radius: 15px;
         padding: 1px;
-        height: 215px;
+        height: 210px;
     }
 
     &__contenue > a > img
@@ -55,16 +55,16 @@
         font-size: 0.9em;
     }
 
-    &__texte h3
+    &__flex
     {
         display: flex;
         justify-content: space-between;
     }
 
-    &__texte i 
+    &__flex i 
     {
-        font-size: 1.3em;
-        padding-right: 15px;
+        font-size: 1.7em;
+        
     }
     
     &__texte p

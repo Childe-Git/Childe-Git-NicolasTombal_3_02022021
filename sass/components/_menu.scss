@@ -1,0 +1,100 @@
+.textblock__menu
+{
+    display: flex;
+    margin-bottom: 16px;
+
+    &__detail
+    {
+        width: 80%;
+        transform-origin: center left;
+        transform: scaleX(1.2);
+        transition: transform 700ms;
+    }
+    
+    &__addto
+    {
+        width: 20%;
+        background-color: $green;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform-origin: center right;
+        transform: scaleX(0);
+        transition: transform 700ms;
+    }
+
+   
+
+    @keyframes rotate {
+        0%{
+            transform: rotate(-360deg);
+        }
+
+        100%{
+            transform: rotate(0);
+        }
+    }
+
+    &__addto span 
+    {
+        color: white;
+        font-size: 1.3em;
+    }
+
+    &:hover
+    {
+        
+        & .textblock__menu__detail
+        {
+            transform: scaleX(1);
+        }
+
+        & .textblock__menu__addto
+        {
+            transform: scaleX(1);
+        }
+
+        & .textblock__menu__addto span 
+        {
+            color: white;
+            font-size: 1.3em;
+            animation: rotate 800ms forwards;
+        }
+    }
+}
+
+.textblock {
+
+    &__menu {
+    opacity: 0;
+    animation: transitionmenu 1000ms forwards;
+    }
+
+    &__menu:nth-child(3) {
+
+        animation-delay: 600ms;
+    }
+
+    &__menu:nth-child(4) {
+
+        animation-delay: 900ms;
+    }
+
+    &__menu:nth-child(5) {
+
+        animation-delay: 1200ms;
+    }
+
+    &__menu:nth-child(6) {
+        
+        animation-delay: 1500ms;
+    }
+}
+
+@keyframes transitionmenu {
+    100% {
+        opacity: 1;
+    }
+}

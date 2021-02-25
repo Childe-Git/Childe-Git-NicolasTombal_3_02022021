@@ -1,0 +1,72 @@
+.heartmenu
+{
+    position: absolute;    
+    text-align: right;    
+    width: 88%;
+    padding-top: 20px;
+    padding-right: 20px;
+
+    &__like
+    {
+        position: relative;
+        left: 26.4px;
+        top: 6px;
+        color: black;
+        font-size: 22px;
+    }
+
+    &__color
+    {
+        color: $grey;
+        position: relative;
+        font-size: 19px;
+        padding-top: 20px;
+        left: 3.2px;
+        top: 4.5px;
+
+        &:hover
+        {
+            animation: fillheart 750ms linear forwards;
+            top: 6.9px;
+            left: 0.6px;
+            font-size: 23.5px;
+        }
+    }
+}
+
+@keyframes fillheart
+{
+    0%{
+        opacity: 0.1;  
+        background-image: linear-gradient($secondary, $primary);
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;  
+    }
+
+    20%{
+        opacity: 0.2;
+    }
+
+    40%{
+        opacity: 0.4;
+    }
+
+    60%{
+        opacity: 0.6;
+    }
+
+    80%{
+        opacity: 0.8;
+    }
+
+    100%{
+        opacity: 1;
+        background-image: linear-gradient($secondary, $primary);
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

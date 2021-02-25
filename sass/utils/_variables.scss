@@ -41,6 +41,13 @@
     width: 92%;    
 }
 
+@mixin overflow 
+{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;    
+}
+
 $greyclair: #F7F7F7;
 $grey: #EDEDED;
 $primary: #9356DC;

@@ -8,6 +8,12 @@
     margin-bottom: 30px;
 }
 
+.fonctionnement
+{
+    background-color: white;
+    height: 100%;
+}
+
 .liste
 {
     font-family: 'Roboto', sans-serif;
@@ -61,6 +67,15 @@
         padding-right: 15px;
         padding-left: 15px;
         color: #a1a1a1;
+       
+            &:hover
+            {   
+                &::before
+                {
+                    opacity: 1;
+                    color: darken($color: $primary, $amount: 2);
+                } 
+            }  
     }
 
     &__restau a, &__menu a, &__deguster a
