@@ -1,0 +1,12 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass-dev": "sass --watch ./sass/style.scss:./css/style.css",
+    "sass-prod": "sass ./sass/style.scss:./css/style.css --style=compressed"
+  },
+  "author": "Tombal Nicolas",
+  "license": "UNLICENSED"
+}

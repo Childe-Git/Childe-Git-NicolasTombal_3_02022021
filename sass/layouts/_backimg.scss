@@ -1,0 +1,32 @@
+/*B A C K G R O U N D   I M A G E*/
+
+.background > img
+{
+    margin-top: -90px;
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+    object-position: 0px -10px;
+}
+
+@media all and (min-width: 480px)
+{
+    .background > img
+    {
+        margin-top: -300px;
+        height: 700px;
+        width: 100%;
+        object-position: 0px 0px;
+    }   
+}
+
+@media all and (min-width: 1200px)
+{
+    .background > img
+    {
+        margin-top: -480px;
+        height: 900px;
+        width: 100%;
+        object-position: 0px 0px;
+    }   
+}

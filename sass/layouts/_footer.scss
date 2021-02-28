@@ -1,0 +1,112 @@
+/*F O O T E R   G E N E R A L*/
+
+.acceuilfooter
+{
+    background-color: rgb(53, 53, 53);
+    width: 100%;
+    height: 100%;
+}
+
+.acceuilfooter > h3 
+{
+    font-family: 'Shrikhand', sans-serif;
+    padding-top: 15px;
+    padding-left: 20px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-size: 1.1em;
+    margin-bottom: -2px;
+}
+
+.foot
+{
+    padding-left: 20px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 3px 3px 4px black;
+    padding-bottom: 40px;
+}
+
+.foot i
+{
+    font-size: 0.8em;
+}
+
+#fork
+{
+    padding-right: 8px;
+}
+
+#hand
+{
+    padding-right: 4px;
+}
+
+.foot p
+{
+    margin-bottom: -8px;
+}
+
+.foot a
+{
+    text-decoration: none;
+    color: white;
+}
+
+@media all and (min-width: 950px)
+{
+    .acceuilfooter > h3, .menufooter > h3
+    {
+        text-align: center;
+        font-size: 1.5em;
+    }
+    
+    .foot
+    {
+        display: flex;
+        justify-content: space-around;
+        padding-left: 0;
+        margin-top: 35px;
+    }
+}
+
+    /*F O O T E R   D E S   M E N U S*/
+
+.menufooter
+{
+    background-color: rgb(53, 53, 53);
+    width: 100%;
+    height: 185px;
+}
+
+.menufooter > h3
+{
+    font-family: 'Shrikhand', sans-serif;
+    padding-top: 12px;
+    padding-left: 20px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    margin-bottom: -2px;
+}
+
+@media all and (min-width: 480px)
+{
+    .menufooter
+    {
+        height: auto;
+        margin-top: -125px;
+    }
+
+    .menufooter > h3
+    {
+        margin-bottom: -20px;
+    }
+}
+
+@media all and (min-width: 1200px)
+{
+    .foot
+    {
+        padding-bottom: 50px;
+    }
+}

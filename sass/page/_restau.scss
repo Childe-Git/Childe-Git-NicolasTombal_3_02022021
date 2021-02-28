@@ -1,0 +1,196 @@
+/*I M A G E   D E S   R E S T A U R A N T S*/
+
+.restaurants
+{
+    background-color: $greyclair;
+    margin-top: 55px;
+    padding-bottom: 40px;
+    margin-bottom: -16px;
+}
+
+.restaurants h2
+{
+    padding-left: 20px;
+    padding-top: 40px;
+    margin-bottom: 8px;
+    font-size: 1.4em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.element
+{
+    padding: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: sticky;
+
+
+    &__contenue
+    {
+        box-shadow: 0px 0px 25px gray;
+        border-radius: 15px;
+        padding: 1px;
+        height: 210px;
+    }
+
+    &__contenue > a > img
+    {
+        border-radius: 15px 15px 0px 0px;
+        width: 100%;
+        height: 150px; 
+        object-fit: cover;
+    }
+
+    &__contenue > a
+    {
+        text-decoration: none;
+        color: black;
+    }
+
+    &__texte
+    {
+        padding-left: 10px;
+        margin-top: -10px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.9em;
+    }
+
+    &__flex
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__flex i 
+    {
+        position: relative;
+        margin-top: 18px;
+        right: 8px;
+        padding-right: 2px;
+        font-size: 1.5em;
+
+        &:hover
+        {
+            cursor: pointer;
+            animation: fillheart 850ms linear forwards;
+            font-weight: 600;
+        }
+    }
+    
+    &__texte p
+    {
+        margin-top: -15px;
+    }
+}
+
+@keyframes fillheart
+{
+    0%{
+        opacity: 0.1;  
+        background-image: linear-gradient($primary, $secondary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;  
+    }
+
+    20%{
+        opacity: 0.2;
+    }
+
+    40%{
+        opacity: 0.4;
+    }
+
+    60%{
+        opacity: 0.6;
+    }
+
+    80%{
+        opacity: 0.8;
+    }
+
+    100%{
+        opacity: 1;
+        background-image: linear-gradient($primary, $secondary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 600;
+    }
+}
+
+
+.text-box {
+    position: absolute;    
+    height: 100%;
+    text-align: right;    
+    width: 85%;
+}
+
+.new
+{
+    background-color: $green;
+    display: inline-block;
+    padding: 5px;
+    padding-right: 8px;
+    padding-left: 8px;
+    font-size: 0.8em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: darken($color: $green, $amount: 45);
+}
+
+@media all and (min-width: 480px)
+{
+    .restaurants
+    {
+        margin-top: 30px;
+        margin-bottom: -15px;
+    }
+
+    .text-box {
+        position: absolute;    
+        height: 100%;
+        text-align: right;    
+        width: 92%;
+    }
+}
+
+@media all and (min-width: 950px)
+{
+    .restaurants
+    {
+        padding-bottom: 20px;
+        margin-bottom: 50px;
+        margin-top: 30px;
+        width: 98%;
+        margin-left: 1%;
+        border-radius: 20px 20px 20px 20px;
+    }
+
+    .conteuneur
+    {
+        display: flex;
+    }
+
+    .element
+    {
+        display: flex;
+        width: 50%;
+    }
+
+    .element__contenue
+    {
+        width: 100%;
+    }
+
+    .restaurants h2
+    {
+        padding-top: 15px;
+    }
+
+    .text-box {
+        position: absolute;    
+        height: 100%;
+        text-align: right;    
+        width: 85%;
+    }
+}

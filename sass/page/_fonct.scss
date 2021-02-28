@@ -1,0 +1,119 @@
+/*L I S T E   D E S   F O N C T I O N N E M E N T S */
+
+.fonctionnement > h2
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+    padding-left: 14px;
+    margin-bottom: 30px;
+}
+
+.fonctionnement
+{
+    background-color: white;
+    height: 100%;
+}
+
+.liste
+{
+    font-family: 'Roboto', sans-serif;
+    
+
+    &__restau a,  &__deguster a, &__menu a
+    {
+        display: flex;
+        @include fonctionnement;
+        position: relative;
+        z-index: 1;
+            &:hover
+            {   
+                &::after
+                {
+                    opacity: 0.2;
+                }
+            }
+    
+            &::after
+            {
+            content: "";
+            position: absolute;
+            border-radius: 20px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: lighten($color: $primary, $amount: 2);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 250ms;
+            }
+    }
+
+    &__restau .number, &__menu a .number, &__deguster a .number
+    {
+        border-radius: 50%;
+        height: 20px;
+        padding-top: 2px;
+        padding-left: 7px;
+        padding-right: 7px;
+        margin-left: -10px;
+        background-color: $primary;
+        font-size: 0.9em;
+        color: white;
+    }
+
+    &__restau i, &__menu i, &__deguster i
+    {
+        padding-right: 15px;
+        padding-left: 15px;
+        color: #a1a1a1;
+       
+            &:hover
+            {   
+                &::before
+                {
+                    opacity: 1;
+                    color: darken($color: $primary, $amount: 2);
+                } 
+            }  
+    }
+
+    &__restau a, &__menu a, &__deguster a
+    {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+@media all and (min-width: 480px)
+{
+    .liste
+    {
+        width: 100%;
+        max-width: 900px;
+        display: flex;
+        flex-wrap: wrap;
+
+        &__restau a,  &__deguster a, &__menu a
+        {
+            padding-right: 10px;
+            margin-right: 0px;
+            box-shadow: 2px 2px 5px $grey;
+        }
+
+        &__restau, &__deguster, &__menu
+        {
+            margin-right: 15px;
+        }
+    }
+}
+
+@media all and (min-width: 950px)
+{
+    .liste
+    {
+        width: 100%;
+        max-width: 900px;
+        display: flex;
+    }
+}
