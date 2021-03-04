@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "sass-dev": "sass --watch ./sass/style.scss:./css/style.css",
-    "sass-prod": "sass ./sass/style.scss:./css/style.css --style=compressed"
+    "sass-prod": "sass ./sass/style.scss:./css/style.css --style=compressed",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
   },
   "author": "Tombal Nicolas",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "browserslist": "last 4 versions"
 }
