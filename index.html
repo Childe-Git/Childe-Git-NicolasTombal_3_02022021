@@ -20,7 +20,12 @@
     <div id="bloc_acceuil">
         <header class="acceuil">
             <h1 class="acceuil__title">ohmyfood</h1>
-            <p class="acceuil__loca"><a href="#"><i id="maps" class="fas fa-map-marker-alt"></i>Paris, Belleville</a></p>
+            <form method="post" action="traitement.php">
+                <p class="acceuil__loca">
+                    <a href="#"><i id="maps" class="fas fa-map-marker-alt"></i></a>
+                    <input id="search" type="search" name="ville" value="Paris, Belleville">
+                </p>
+            </form>
             <h2 class="acceuil__titlend">Réservez le menu qui vous convient</h2>
             <p class="acceuil__para">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
             <div id="container">

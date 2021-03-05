@@ -24,16 +24,16 @@ header a
 
     &__loca
     {
-        @include texte;
-        font-weight: bold;
+        display: flex;
+        justify-content: center;
         margin-top: -21px;
         background-color: $grey;
         padding-top: 12px;
         padding-bottom: 12px;
         font-size: 0.9em;
         width: 98%;
-        margin-left: 4px;
         border-top: 2px solid #E1E1E1;
+        margin-left: 4px;
     }
 
     &__titlend
@@ -54,6 +54,25 @@ header a
         padding-bottom: 10px;
         margin-top: -5px;
     }
+}
+
+#search
+{
+    background-color: inherit;
+    border-color: inherit;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: bold;
+    @include texte;
+}
+
+#maps
+{
+    font-size: 1.2em;
+    position: relative;
+    left: 20px;
+    padding: 0;
 }
 
 .btn
